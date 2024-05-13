@@ -1,0 +1,96 @@
+//SORUCE CODE BY @riskixd22
+//INSTAGRAM @riskixd22
+//Whatsapp 085922391086
+///***NOTE JIKA KALIAN INGIN MENAMBAHKAN SESUATU SILAHKAN ,JANGAN UBAH COPYRIGHT NYA
+
+///------------CODE HTML------------//////
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot -iky</title>
+</head>
+<body>
+    <div id="chat-container">
+        <div id="chat-box"></div>
+        <input type="text" id="user-input" placeholder="Ketik pesanmu...">
+        <button onclick="sendMessage()">kirim</button>
+    </div>
+  
+ /////////--------BAGIAN JAVASCRIPT------/////////
+    <script>
+        const chatBox = document.getElementById('chat-box');
+        const userInput = document.getElementById('user-input');
+
+        function sendMessage() {
+            const message = userInput.value;
+            displayMessage('Kamu: ' + message);  //////INI DI UBAH TERSERAH (MESSAGE NYA JAN DI RUBAH)
+            respondToMessage(message);
+            userInput.value = '';
+        }
+
+        function displayMessage(message) {
+            const messageElement = document.createElement('div');
+            messageElement.textContent = message;
+            chatBox.appendChild(messageElement);
+        }
+
+            //////--BAGIAN CASE (OWNER @riskixd22)--//////
+        function respondToMessage(message) {
+            let response;
+            switch (message.toLowerCase()) {
+                case 'halo':
+                case 'hallo bang':
+                    response = 'yo bang😁';
+                    break;
+
+                    case 'owner':
+                        response = 'Yang menciptakan aku adalah @riskixd22, ia membuat ku dengan sekumpulan kode menggunakan bahasa pemrograman HTML dan JavaScript';
+                        break;
+
+                    case 'apakah kamu tau febi senda?':
+                    response = 'ya febi senda berasal dari Maumere ia viral karena video nya yang ganas';
+                    break;
+
+                    case 'sc':
+                        case 'script':
+                            response = 'Source Code ChatBot ini menggunakan bahasa pemrograman HTML dan JavaScript untuk script nya sendiri belom di publish owner dikarenakan masih dalam tahap pengembangan';
+                            break;
+
+                            case 'apakah kamu main ff':
+                                case 'apakah kamu main free fire':
+                                    case 'main ff tidak':
+                                response = 'ya aku memainkan free fire dan owner ku juga, kamu bisa mencari username free fire ku : YuKnowIky+ jangan lupa di add ya bot 😋😉';
+                                break;
+
+                                case 'anjing':
+                                    case 'ajg':
+                                        case 'anjg':
+                                    response = 'tobat brody ingat dosa';
+                                    break;
+
+                                    case 'babi':
+                                        response = 'tobat brody ingat dosa';
+                                        break;
+
+
+                                    case 'bokep':
+                                        response = 'Tante tante lihat anak nya nyari bokep tante wah parah kamu 😧😱';
+                                        break;
+
+
+                case 'bewan kita':
+                    response = 'widih ngeri sepuh🥶';
+                    break;
+                default:
+                    response = 'Mohon maaf saya tidak mengerti,Harap mengetik yang benar agar sistem dapat membaca nya'; /////NOTE INI JANGAN DI UBAH SOALNYA UDAH BAWAAN KALAU DI RUBAH NANTI ERROR
+                    break;
+            }
+            displayMessage('ChatBot VIP: ' + response); ////MASUKAN NAMA BOT KALIAN (MESSAGE JAN DI RUBAH)
+        }
+    </script>
+</body>
+<p>&copy;riskixd22</p>   /////////JANGAN DI HAPUS
+</html>
